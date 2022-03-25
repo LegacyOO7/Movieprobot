@@ -30,7 +30,7 @@ BUTTONS = {}
 SPELL_CHECK = {}
 
 
-@Client.on_message(filters.user(ADMINS) & filters.private & filters.text)
+@Client.on_message(filters.user(ADMINS) & filters.private & filters.group & filters.text)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
     if k == False:
